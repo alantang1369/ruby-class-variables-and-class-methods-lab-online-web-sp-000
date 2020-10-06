@@ -4,6 +4,8 @@ class Song
     @name = name
     @artist = artist
     @genre = genre
+  end
+  def initialize
     @@count += 1
   end
   
