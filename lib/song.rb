@@ -18,13 +18,31 @@ class Song
       @@genres << genre 
       @@genre_count[genre] = 1
     end  
-    @@artists << artist unless @@artists.include? (artist)
+    
+    if  @@artists.include? (artist)
+        @@artist_count[artist] += 1
+    else @@artists << artist
+      @@artist_count[artist] = 1
+    end  
   end
   
   def self.count
     @@count
   end
   
+  def self.artists
+    @@artists
+  end
   
+  def self.genres
+    @@genres
+  end
   
+  def self.artist_count
+    @@artist_count
+  end
+  
+  def self.genre_count
+    @@genre_count
+  end
 end  
