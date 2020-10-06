@@ -13,20 +13,7 @@ class Song
     @@count += 1
     @@genres << genre
     @@artists << artist
-    if  !@@genres.include? (genre)
-        @@genre_count[genre] = 1
-         
-    else  
-       @@genre_count[genre] += 1
-      
-    end  
     
-    if  !@@artists.include? (artist)
-        @@artist_count[artist] = 1
-    else 
-      
-      @@artist_count[artist] += 1
-    end  
   end
   
   def self.count
@@ -34,7 +21,9 @@ class Song
   end
   
   def self.artists
-    @@artists
+    array = []
+    @@artists.each do |a|
+      if array. include? (a)
   end
   
   def self.genres
